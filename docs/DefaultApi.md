@@ -13,12 +13,12 @@ Method | HTTP request | Description
 [**CreateDaemon**](DefaultApi.md#CreateDaemon) | **Post** /servers/{serverId}/daemons | Create Daemon
 [**CreateDatabase**](DefaultApi.md#CreateDatabase) | **Post** /servers/{serverId}/databases | Create Database
 [**CreateDeployKey**](DefaultApi.md#CreateDeployKey) | **Post** /servers/{serverId}/sites/{siteId}/deploy-key | Create Deploy Key
+[**CreateFirewallRule**](DefaultApi.md#CreateFirewallRule) | **Post** /servers/{serverId}/firewall-rules | Create Firewall Rule
 [**CreateJob**](DefaultApi.md#CreateJob) | **Post** /servers/{serverId}/jobs | Create Job
 [**CreateKey**](DefaultApi.md#CreateKey) | **Post** /servers/{serverId}/keys | Create Key
 [**CreateMonitor**](DefaultApi.md#CreateMonitor) | **Post** /servers/{serverId}/monitors | Create Monitor
 [**CreateRecipe**](DefaultApi.md#CreateRecipe) | **Post** /recipes | Create Recipe
 [**CreateRedirectRule**](DefaultApi.md#CreateRedirectRule) | **Post** /servers/{serverId}/sites/{siteId}/redirect-rules | Create Redirect Rule
-[**CreateRule**](DefaultApi.md#CreateRule) | **Post** /servers/{serverId}/firewall-rules | Create Rule
 [**CreateSecurityRule**](DefaultApi.md#CreateSecurityRule) | **Post** /servers/{serverId}/sites/{siteId}/security-rules | Create Security Rule
 [**CreateServer**](DefaultApi.md#CreateServer) | **Post** /servers | Create Server
 [**CreateSite**](DefaultApi.md#CreateSite) | **Post** /servers/{serverId}/sites | Create Site
@@ -31,13 +31,13 @@ Method | HTTP request | Description
 [**DeleteDaemon**](DefaultApi.md#DeleteDaemon) | **Delete** /servers/{serverId}/daemons/{daemonId} | Delete Daemon
 [**DeleteDatabase**](DefaultApi.md#DeleteDatabase) | **Delete** /servers/{serverId}/databases/{databaseId} | Delete Database
 [**DeleteDeployKey**](DefaultApi.md#DeleteDeployKey) | **Delete** /servers/{serverId}/sites/{siteId}/deploy-key | Delete Deploy Key
+[**DeleteFirewallRule**](DefaultApi.md#DeleteFirewallRule) | **Delete** /servers/{serverId}/firewall-rules/{ruleId} | Delete Firewall Rule
 [**DeleteJob**](DefaultApi.md#DeleteJob) | **Delete** /servers/{serverId}/jobs/{jobId} | Delete Job
 [**DeleteKey**](DefaultApi.md#DeleteKey) | **Delete** /servers/{serverId}/keys/{keyId} | Delete Key
 [**DeleteMonitor**](DefaultApi.md#DeleteMonitor) | **Delete** /servers/{serverId}/monitors/{monitorId} | Delete Monitor
 [**DeleteNginxTemplate**](DefaultApi.md#DeleteNginxTemplate) | **Delete** /servers/{serverId}/nginx/templates/{templateId} | Delete Nginx Template
 [**DeleteRecipe**](DefaultApi.md#DeleteRecipe) | **Delete** /recipes/{recipeId} | Delete Recipe
 [**DeleteRedirectRule**](DefaultApi.md#DeleteRedirectRule) | **Delete** /servers/{serverId}/sites/{siteId}/redirect-rules/{id} | Delete Redirect Rule
-[**DeleteRule**](DefaultApi.md#DeleteRule) | **Delete** /servers/{serverId}/firewall-rules/{ruleId} | Delete Rule
 [**DeleteSecurityRule**](DefaultApi.md#DeleteSecurityRule) | **Delete** /servers/{serverId}/sites/{siteId}/security-rules/{id} | Delete Security Rule
 [**DeleteServer**](DefaultApi.md#DeleteServer) | **Delete** /servers/{id} | Delete Server
 [**DeleteSite**](DefaultApi.md#DeleteSite) | **Delete** /servers/{serverId}/sites/{siteId} | Delete Site
@@ -61,6 +61,7 @@ Method | HTTP request | Description
 [**GetDeploymentOutput**](DefaultApi.md#GetDeploymentOutput) | **Get** /servers/{serverId}/sites/{siteId}/deployment-history/{deploymentId}/output | Get Deployment Output
 [**GetDeploymentScript**](DefaultApi.md#GetDeploymentScript) | **Get** /servers/{serverId}/sites/{siteId}/deployment/script | Get Deployment Script
 [**GetEnvFile**](DefaultApi.md#GetEnvFile) | **Get** /servers/{serverId}/sites/{siteId}/env | Get .env File
+[**GetFirewallRule**](DefaultApi.md#GetFirewallRule) | **Get** /servers/{serverId}/firewall-rules/{ruleId} | Get Firewall Rule
 [**GetJob**](DefaultApi.md#GetJob) | **Get** /servers/{serverId}/jobs/{jobId} | Get Job
 [**GetKey**](DefaultApi.md#GetKey) | **Get** /servers/{serverId}/keys/{keyId} | Get Key
 [**GetLog**](DefaultApi.md#GetLog) | **Get** /servers/{serverId}/logs | Get Log
@@ -71,7 +72,6 @@ Method | HTTP request | Description
 [**GetRecipe**](DefaultApi.md#GetRecipe) | **Get** /recipes/{recipeId} | Get Recipe
 [**GetRedirectRule**](DefaultApi.md#GetRedirectRule) | **Get** /servers/{serverId}/sites/{siteId}/redirect-rules/{id} | Get Redirect Rule
 [**GetRegions**](DefaultApi.md#GetRegions) | **Get** /regions | Get Regions
-[**GetRule**](DefaultApi.md#GetRule) | **Get** /servers/{serverId}/firewall-rules/{ruleId} | Get Rule
 [**GetSecurityRule**](DefaultApi.md#GetSecurityRule) | **Get** /servers/{serverId}/sites/{siteId}/security-rules/{id} | Get Security Rule
 [**GetServer**](DefaultApi.md#GetServer) | **Get** /servers/{id} | Get Server
 [**GetSigningRequest**](DefaultApi.md#GetSigningRequest) | **Get** /servers/{serverId}/sites/{siteId}/certificates/{id}/csr | Get Signing Request
@@ -80,19 +80,20 @@ Method | HTTP request | Description
 [**GetWebhook**](DefaultApi.md#GetWebhook) | **Get** /servers/{server_id}/sites/{site_id}/webhooks/{id} | Get Webhook
 [**GetWebhooks**](DefaultApi.md#GetWebhooks) | **Get** /servers/{server_id}/sites/{site_id}/webhooks | Get Webhooks
 [**GetWorker**](DefaultApi.md#GetWorker) | **Get** /servers/{serverId}/sites/{siteId}/workers/{id} | Get Worker
-[**Install**](DefaultApi.md#Install) | **Post** /servers/{serverId}/sites/{siteId}/wordpress | Install
 [**InstallBlackfire**](DefaultApi.md#InstallBlackfire) | **Post** /servers/{id}/blackfire/install | Install Blackfire
 [**InstallCertificate**](DefaultApi.md#InstallCertificate) | **Post** /servers/{serverId}/sites/{siteId}/certificates/{id}/install | Install Certificate
-[**InstallNew**](DefaultApi.md#InstallNew) | **Post** /servers/{serverId}/sites/{siteId}/git | Install New
+[**InstallNewGitProject**](DefaultApi.md#InstallNewGitProject) | **Post** /servers/{serverId}/sites/{siteId}/git | Install New Git Project
 [**InstallPHPVersion**](DefaultApi.md#InstallPHPVersion) | **Post** /servers/{serverId}/php | Install PHP Version
 [**InstallPapertrail**](DefaultApi.md#InstallPapertrail) | **Post** /servers/{id}/papertrail/install | Install Papertrail
 [**InstallPhpMyAdmin**](DefaultApi.md#InstallPhpMyAdmin) | **Post** /servers/{serverId}/sites/{siteId}/phpmyadmin | Install phpMyAdmin
+[**InstallWordPress**](DefaultApi.md#InstallWordPress) | **Post** /servers/{serverId}/sites/{siteId}/wordpress | Install WordPress
 [**ListBackupConfigurations**](DefaultApi.md#ListBackupConfigurations) | **Get** /servers/{serverId}/backup-configs | List Backup Configurations
 [**ListCertificates**](DefaultApi.md#ListCertificates) | **Get** /servers/{serverId}/sites/{siteId}/certificates | List Certificates
 [**ListCommandHistory**](DefaultApi.md#ListCommandHistory) | **Get** /servers/{serverId}/sites/{siteId}/commands | List Command History
 [**ListDaemons**](DefaultApi.md#ListDaemons) | **Get** /servers/{serverId}/daemons | List Daemons
 [**ListDatabases**](DefaultApi.md#ListDatabases) | **Get** /servers/{serverId}/databases | List Databases
 [**ListDeployments**](DefaultApi.md#ListDeployments) | **Get** /servers/{serverId}/sites/{siteId}/deployment-history | List Deployments
+[**ListFirewallRules**](DefaultApi.md#ListFirewallRules) | **Get** /servers/{serverId}/firewall-rules | List Firewall Rules
 [**ListJobs**](DefaultApi.md#ListJobs) | **Get** /servers/{serverId}/jobs | List Jobs
 [**ListKeys**](DefaultApi.md#ListKeys) | **Get** /servers/{serverId}/keys | List Keys
 [**ListMonitors**](DefaultApi.md#ListMonitors) | **Get** /servers/{serverId}/monitors | List Monitors
@@ -100,7 +101,6 @@ Method | HTTP request | Description
 [**ListPHPVersions**](DefaultApi.md#ListPHPVersions) | **Get** /servers/{serverId}/php | List PHP Versions
 [**ListRecipes**](DefaultApi.md#ListRecipes) | **Get** /recipes | List Recipes
 [**ListRedirectRules**](DefaultApi.md#ListRedirectRules) | **Get** /servers/{serverId}/sites/{siteId}/redirect-rules | List Redirect Rules
-[**ListRules**](DefaultApi.md#ListRules) | **Get** /servers/{serverId}/firewall-rules | List Rules
 [**ListSecurityRules**](DefaultApi.md#ListSecurityRules) | **Get** /servers/{serverId}/sites/{siteId}/security-rules | List Security Rules
 [**ListServers**](DefaultApi.md#ListServers) | **Get** /servers | List Servers
 [**ListSites**](DefaultApi.md#ListSites) | **Get** /servers/{serverId}/sites | List Sites
@@ -398,6 +398,33 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **CreateFirewallRule**
+> Rule CreateFirewallRule(ctx, body, serverId)
+Create Firewall Rule
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **body** | [**ServerIdFirewallrulesBody**](ServerIdFirewallrulesBody.md)|  | 
+  **serverId** | **int32**| The ID of the server. | 
+
+### Return type
+
+[**Rule**](Rule.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **CreateJob**
 > Job CreateJob(ctx, body, serverId)
 Create Job
@@ -521,33 +548,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RedirectRule**](RedirectRule.md)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **CreateRule**
-> Rule CreateRule(ctx, body, serverId)
-Create Rule
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServerIdFirewallrulesBody**](ServerIdFirewallrulesBody.md)|  | 
-  **serverId** | **int32**| The ID of the server. | 
-
-### Return type
-
-[**Rule**](Rule.md)
 
 ### Authorization
 
@@ -887,6 +887,33 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **DeleteFirewallRule**
+> DeleteFirewallRule(ctx, serverId, ruleId)
+Delete Firewall Rule
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **serverId** | **int32**| The ID of the server. | 
+  **ruleId** | **int32**| The ID of the rule. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **DeleteJob**
 > DeleteJob(ctx, serverId, jobId)
 Delete Job
@@ -1033,33 +1060,6 @@ Name | Type | Description  | Notes
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
   **id** | **int32**| The ID of the resource. | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **DeleteRule**
-> DeleteRule(ctx, serverId, ruleId)
-Delete Rule
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **serverId** | **int32**| The ID of the server. | 
-  **ruleId** | **int32**| The ID of the rule. | 
 
 ### Return type
 
@@ -1697,6 +1697,33 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **GetFirewallRule**
+> Rule GetFirewallRule(ctx, serverId, ruleId)
+Get Firewall Rule
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **serverId** | **int32**| The ID of the server. | 
+  **ruleId** | **int32**| The ID of the rule. | 
+
+### Return type
+
+[**Rule**](Rule.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **GetJob**
 > Job GetJob(ctx, serverId, jobId)
 Get Job
@@ -1960,33 +1987,6 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **GetRule**
-> Rule GetRule(ctx, serverId, ruleId)
-Get Rule
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **serverId** | **int32**| The ID of the server. | 
-  **ruleId** | **int32**| The ID of the rule. | 
-
-### Return type
-
-[**Rule**](Rule.md)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **GetSecurityRule**
 > SecurityRule GetSecurityRule(ctx, serverId, siteId, id)
 Get Security Rule
@@ -2206,34 +2206,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Install**
-> Install(ctx, body, serverId, siteId)
-Install
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdWordpressBody**](SiteIdWordpressBody.md)|  | 
-  **serverId** | **int32**| The ID of the server. | 
-  **siteId** | **int32**| The ID of the site. | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **InstallBlackfire**
 > InstallBlackfire(ctx, body, id)
 Install Blackfire
@@ -2290,9 +2262,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **InstallNew**
-> InstallNew(ctx, body, serverId, siteId)
-Install New
+# **InstallNewGitProject**
+> InstallNewGitProject(ctx, body, serverId, siteId)
+Install New Git Project
 
 ### Required Parameters
 
@@ -2381,6 +2353,34 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **body** | [**SiteIdPhpmyadminBody**](SiteIdPhpmyadminBody.md)|  | 
+  **serverId** | **int32**| The ID of the server. | 
+  **siteId** | **int32**| The ID of the site. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **InstallWordPress**
+> InstallWordPress(ctx, body, serverId, siteId)
+Install WordPress
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **body** | [**SiteIdWordpressBody**](SiteIdWordpressBody.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -2546,6 +2546,32 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]Deployment**](array.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **ListFirewallRules**
+> []Rule ListFirewallRules(ctx, serverId)
+List Firewall Rules
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **serverId** | **int32**| The ID of the server. | 
+
+### Return type
+
+[**[]Rule**](array.md)
 
 ### Authorization
 
@@ -2725,32 +2751,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]RedirectRule**](array.md)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ListRules**
-> []Rule ListRules(ctx, serverId)
-List Rules
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **serverId** | **int32**| The ID of the server. | 
-
-### Return type
-
-[**[]Rule**](array.md)
 
 ### Authorization
 
