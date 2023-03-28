@@ -25,40 +25,40 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**AddSiteAliases**](docs/DefaultApi.md#addsitealiases) | **Put** /servers/{serverId}/sites/{siteId}/aliases | Add Site Aliases
 *DefaultApi* | [**ChangeSitePHPVersion**](docs/DefaultApi.md#changesitephpversion) | **Put** /servers/{serverId}/sites/{siteId}/php | Change Site PHP Version
 *DefaultApi* | [**CloningAnExistingCertificate**](docs/DefaultApi.md#cloninganexistingcertificate) | **Post** /servers/{serverId}/sites/{siteId}/certificates | Cloning An Existing Certificate
-*DefaultApi* | [**Create**](docs/DefaultApi.md#create) | **Post** /servers/{server_id}/sites/{site_id}/webhooks | Create
 *DefaultApi* | [**CreateBackupConfiguration**](docs/DefaultApi.md#createbackupconfiguration) | **Post** /servers/{serverId}/backup-configs | Create Backup Configuration
 *DefaultApi* | [**CreateDaemon**](docs/DefaultApi.md#createdaemon) | **Post** /servers/{serverId}/daemons | Create Daemon
 *DefaultApi* | [**CreateDatabase**](docs/DefaultApi.md#createdatabase) | **Post** /servers/{serverId}/databases | Create Database
+*DefaultApi* | [**CreateDatabaseUser**](docs/DefaultApi.md#createdatabaseuser) | **Post** /servers/{serverId}/database-users | Create Database User
 *DefaultApi* | [**CreateDeployKey**](docs/DefaultApi.md#createdeploykey) | **Post** /servers/{serverId}/sites/{siteId}/deploy-key | Create Deploy Key
+*DefaultApi* | [**CreateFirewallRule**](docs/DefaultApi.md#createfirewallrule) | **Post** /servers/{serverId}/firewall-rules | Create Firewall Rule
 *DefaultApi* | [**CreateJob**](docs/DefaultApi.md#createjob) | **Post** /servers/{serverId}/jobs | Create Job
 *DefaultApi* | [**CreateKey**](docs/DefaultApi.md#createkey) | **Post** /servers/{serverId}/keys | Create Key
 *DefaultApi* | [**CreateMonitor**](docs/DefaultApi.md#createmonitor) | **Post** /servers/{serverId}/monitors | Create Monitor
 *DefaultApi* | [**CreateRecipe**](docs/DefaultApi.md#createrecipe) | **Post** /recipes | Create Recipe
 *DefaultApi* | [**CreateRedirectRule**](docs/DefaultApi.md#createredirectrule) | **Post** /servers/{serverId}/sites/{siteId}/redirect-rules | Create Redirect Rule
-*DefaultApi* | [**CreateRule**](docs/DefaultApi.md#createrule) | **Post** /servers/{serverId}/firewall-rules | Create Rule
 *DefaultApi* | [**CreateSecurityRule**](docs/DefaultApi.md#createsecurityrule) | **Post** /servers/{serverId}/sites/{siteId}/security-rules | Create Security Rule
 *DefaultApi* | [**CreateServer**](docs/DefaultApi.md#createserver) | **Post** /servers | Create Server
 *DefaultApi* | [**CreateSite**](docs/DefaultApi.md#createsite) | **Post** /servers/{serverId}/sites | Create Site
 *DefaultApi* | [**CreateTemplate**](docs/DefaultApi.md#createtemplate) | **Post** /servers/{serverId}/nginx/templates | Create Template
-*DefaultApi* | [**CreateUser**](docs/DefaultApi.md#createuser) | **Post** /servers/{serverId}/database-users | Create User
+*DefaultApi* | [**CreateWebhook**](docs/DefaultApi.md#createwebhook) | **Post** /servers/{server_id}/sites/{site_id}/webhooks | Create Webhook
 *DefaultApi* | [**CreateWorker**](docs/DefaultApi.md#createworker) | **Post** /servers/{serverId}/sites/{siteId}/workers | Create Worker
 *DefaultApi* | [**DeleteBackup**](docs/DefaultApi.md#deletebackup) | **Delete** /servers/{serverId}/backup-configs/{backupConfigurationId}/backups/{backupId} | Delete Backup
 *DefaultApi* | [**DeleteBackupConfiguration**](docs/DefaultApi.md#deletebackupconfiguration) | **Delete** /servers/{serverId}/backup-configs/{backupConfigurationId} | Delete Backup Configuration
 *DefaultApi* | [**DeleteCertificate**](docs/DefaultApi.md#deletecertificate) | **Delete** /servers/{serverId}/sites/{siteId}/certificates/{id} | Delete Certificate
 *DefaultApi* | [**DeleteDaemon**](docs/DefaultApi.md#deletedaemon) | **Delete** /servers/{serverId}/daemons/{daemonId} | Delete Daemon
 *DefaultApi* | [**DeleteDatabase**](docs/DefaultApi.md#deletedatabase) | **Delete** /servers/{serverId}/databases/{databaseId} | Delete Database
+*DefaultApi* | [**DeleteDatabaseUser**](docs/DefaultApi.md#deletedatabaseuser) | **Delete** /servers/{serverId}/database-users/{userId} | Delete Database User
 *DefaultApi* | [**DeleteDeployKey**](docs/DefaultApi.md#deletedeploykey) | **Delete** /servers/{serverId}/sites/{siteId}/deploy-key | Delete Deploy Key
+*DefaultApi* | [**DeleteFirewallRule**](docs/DefaultApi.md#deletefirewallrule) | **Delete** /servers/{serverId}/firewall-rules/{ruleId} | Delete Firewall Rule
 *DefaultApi* | [**DeleteJob**](docs/DefaultApi.md#deletejob) | **Delete** /servers/{serverId}/jobs/{jobId} | Delete Job
 *DefaultApi* | [**DeleteKey**](docs/DefaultApi.md#deletekey) | **Delete** /servers/{serverId}/keys/{keyId} | Delete Key
 *DefaultApi* | [**DeleteMonitor**](docs/DefaultApi.md#deletemonitor) | **Delete** /servers/{serverId}/monitors/{monitorId} | Delete Monitor
 *DefaultApi* | [**DeleteNginxTemplate**](docs/DefaultApi.md#deletenginxtemplate) | **Delete** /servers/{serverId}/nginx/templates/{templateId} | Delete Nginx Template
 *DefaultApi* | [**DeleteRecipe**](docs/DefaultApi.md#deleterecipe) | **Delete** /recipes/{recipeId} | Delete Recipe
 *DefaultApi* | [**DeleteRedirectRule**](docs/DefaultApi.md#deleteredirectrule) | **Delete** /servers/{serverId}/sites/{siteId}/redirect-rules/{id} | Delete Redirect Rule
-*DefaultApi* | [**DeleteRule**](docs/DefaultApi.md#deleterule) | **Delete** /servers/{serverId}/firewall-rules/{ruleId} | Delete Rule
 *DefaultApi* | [**DeleteSecurityRule**](docs/DefaultApi.md#deletesecurityrule) | **Delete** /servers/{serverId}/sites/{siteId}/security-rules/{id} | Delete Security Rule
 *DefaultApi* | [**DeleteServer**](docs/DefaultApi.md#deleteserver) | **Delete** /servers/{id} | Delete Server
 *DefaultApi* | [**DeleteSite**](docs/DefaultApi.md#deletesite) | **Delete** /servers/{serverId}/sites/{siteId} | Delete Site
-*DefaultApi* | [**DeleteUser**](docs/DefaultApi.md#deleteuser) | **Delete** /servers/{serverId}/database-users/{userId} | Delete User
 *DefaultApi* | [**DeleteWebhook**](docs/DefaultApi.md#deletewebhook) | **Delete** /servers/{server_id}/sites/{site_id}/webhooks/{id} | Delete Webhook
 *DefaultApi* | [**DeleteWorker**](docs/DefaultApi.md#deleteworker) | **Delete** /servers/{serverId}/sites/{siteId}/workers/{id} | Delete Worker
 *DefaultApi* | [**DeployNow**](docs/DefaultApi.md#deploynow) | **Post** /servers/{serverId}/sites/{siteId}/deployment/deploy | Deploy Now
@@ -73,11 +73,13 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**GetCredentials**](docs/DefaultApi.md#getcredentials) | **Get** /credentials | Get Credentials
 *DefaultApi* | [**GetDaemon**](docs/DefaultApi.md#getdaemon) | **Get** /servers/{serverId}/daemons/{daemonId} | Get Daemon
 *DefaultApi* | [**GetDatabase**](docs/DefaultApi.md#getdatabase) | **Get** /servers/{serverId}/databases/{databaseId} | Get Database
+*DefaultApi* | [**GetDatabaseUser**](docs/DefaultApi.md#getdatabaseuser) | **Get** /servers/{serverId}/database-users/{userId} | Get Database User
 *DefaultApi* | [**GetDeployment**](docs/DefaultApi.md#getdeployment) | **Get** /servers/{serverId}/sites/{siteId}/deployment-history/{deploymentId} | Get Deployment
 *DefaultApi* | [**GetDeploymentLog**](docs/DefaultApi.md#getdeploymentlog) | **Get** /servers/{serverId}/sites/{siteId}/deployment/log | Get Deployment Log
 *DefaultApi* | [**GetDeploymentOutput**](docs/DefaultApi.md#getdeploymentoutput) | **Get** /servers/{serverId}/sites/{siteId}/deployment-history/{deploymentId}/output | Get Deployment Output
 *DefaultApi* | [**GetDeploymentScript**](docs/DefaultApi.md#getdeploymentscript) | **Get** /servers/{serverId}/sites/{siteId}/deployment/script | Get Deployment Script
 *DefaultApi* | [**GetEnvFile**](docs/DefaultApi.md#getenvfile) | **Get** /servers/{serverId}/sites/{siteId}/env | Get .env File
+*DefaultApi* | [**GetFirewallRule**](docs/DefaultApi.md#getfirewallrule) | **Get** /servers/{serverId}/firewall-rules/{ruleId} | Get Firewall Rule
 *DefaultApi* | [**GetJob**](docs/DefaultApi.md#getjob) | **Get** /servers/{serverId}/jobs/{jobId} | Get Job
 *DefaultApi* | [**GetKey**](docs/DefaultApi.md#getkey) | **Get** /servers/{serverId}/keys/{keyId} | Get Key
 *DefaultApi* | [**GetLog**](docs/DefaultApi.md#getlog) | **Get** /servers/{serverId}/logs | Get Log
@@ -88,28 +90,29 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**GetRecipe**](docs/DefaultApi.md#getrecipe) | **Get** /recipes/{recipeId} | Get Recipe
 *DefaultApi* | [**GetRedirectRule**](docs/DefaultApi.md#getredirectrule) | **Get** /servers/{serverId}/sites/{siteId}/redirect-rules/{id} | Get Redirect Rule
 *DefaultApi* | [**GetRegions**](docs/DefaultApi.md#getregions) | **Get** /regions | Get Regions
-*DefaultApi* | [**GetRule**](docs/DefaultApi.md#getrule) | **Get** /servers/{serverId}/firewall-rules/{ruleId} | Get Rule
 *DefaultApi* | [**GetSecurityRule**](docs/DefaultApi.md#getsecurityrule) | **Get** /servers/{serverId}/sites/{siteId}/security-rules/{id} | Get Security Rule
 *DefaultApi* | [**GetServer**](docs/DefaultApi.md#getserver) | **Get** /servers/{id} | Get Server
 *DefaultApi* | [**GetSigningRequest**](docs/DefaultApi.md#getsigningrequest) | **Get** /servers/{serverId}/sites/{siteId}/certificates/{id}/csr | Get Signing Request
 *DefaultApi* | [**GetSite**](docs/DefaultApi.md#getsite) | **Get** /servers/{serverId}/sites/{siteId} | Get Site
-*DefaultApi* | [**GetUser**](docs/DefaultApi.md#getuser) | **Get** /servers/{serverId}/database-users/{userId} | Get User
+*DefaultApi* | [**GetUser**](docs/DefaultApi.md#getuser) | **Get** /user | Get User
 *DefaultApi* | [**GetWebhook**](docs/DefaultApi.md#getwebhook) | **Get** /servers/{server_id}/sites/{site_id}/webhooks/{id} | Get Webhook
 *DefaultApi* | [**GetWebhooks**](docs/DefaultApi.md#getwebhooks) | **Get** /servers/{server_id}/sites/{site_id}/webhooks | Get Webhooks
 *DefaultApi* | [**GetWorker**](docs/DefaultApi.md#getworker) | **Get** /servers/{serverId}/sites/{siteId}/workers/{id} | Get Worker
-*DefaultApi* | [**Install**](docs/DefaultApi.md#install) | **Post** /servers/{serverId}/sites/{siteId}/wordpress | Install
 *DefaultApi* | [**InstallBlackfire**](docs/DefaultApi.md#installblackfire) | **Post** /servers/{id}/blackfire/install | Install Blackfire
 *DefaultApi* | [**InstallCertificate**](docs/DefaultApi.md#installcertificate) | **Post** /servers/{serverId}/sites/{siteId}/certificates/{id}/install | Install Certificate
-*DefaultApi* | [**InstallNew**](docs/DefaultApi.md#installnew) | **Post** /servers/{serverId}/sites/{siteId}/git | Install New
+*DefaultApi* | [**InstallNewGitProject**](docs/DefaultApi.md#installnewgitproject) | **Post** /servers/{serverId}/sites/{siteId}/git | Install New Git Project
 *DefaultApi* | [**InstallPHPVersion**](docs/DefaultApi.md#installphpversion) | **Post** /servers/{serverId}/php | Install PHP Version
 *DefaultApi* | [**InstallPapertrail**](docs/DefaultApi.md#installpapertrail) | **Post** /servers/{id}/papertrail/install | Install Papertrail
 *DefaultApi* | [**InstallPhpMyAdmin**](docs/DefaultApi.md#installphpmyadmin) | **Post** /servers/{serverId}/sites/{siteId}/phpmyadmin | Install phpMyAdmin
+*DefaultApi* | [**InstallWordPress**](docs/DefaultApi.md#installwordpress) | **Post** /servers/{serverId}/sites/{siteId}/wordpress | Install WordPress
 *DefaultApi* | [**ListBackupConfigurations**](docs/DefaultApi.md#listbackupconfigurations) | **Get** /servers/{serverId}/backup-configs | List Backup Configurations
 *DefaultApi* | [**ListCertificates**](docs/DefaultApi.md#listcertificates) | **Get** /servers/{serverId}/sites/{siteId}/certificates | List Certificates
 *DefaultApi* | [**ListCommandHistory**](docs/DefaultApi.md#listcommandhistory) | **Get** /servers/{serverId}/sites/{siteId}/commands | List Command History
 *DefaultApi* | [**ListDaemons**](docs/DefaultApi.md#listdaemons) | **Get** /servers/{serverId}/daemons | List Daemons
+*DefaultApi* | [**ListDatabaseUsers**](docs/DefaultApi.md#listdatabaseusers) | **Get** /servers/{serverId}/database-users | List Database Users
 *DefaultApi* | [**ListDatabases**](docs/DefaultApi.md#listdatabases) | **Get** /servers/{serverId}/databases | List Databases
 *DefaultApi* | [**ListDeployments**](docs/DefaultApi.md#listdeployments) | **Get** /servers/{serverId}/sites/{siteId}/deployment-history | List Deployments
+*DefaultApi* | [**ListFirewallRules**](docs/DefaultApi.md#listfirewallrules) | **Get** /servers/{serverId}/firewall-rules | List Firewall Rules
 *DefaultApi* | [**ListJobs**](docs/DefaultApi.md#listjobs) | **Get** /servers/{serverId}/jobs | List Jobs
 *DefaultApi* | [**ListKeys**](docs/DefaultApi.md#listkeys) | **Get** /servers/{serverId}/keys | List Keys
 *DefaultApi* | [**ListMonitors**](docs/DefaultApi.md#listmonitors) | **Get** /servers/{serverId}/monitors | List Monitors
@@ -117,11 +120,9 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**ListPHPVersions**](docs/DefaultApi.md#listphpversions) | **Get** /servers/{serverId}/php | List PHP Versions
 *DefaultApi* | [**ListRecipes**](docs/DefaultApi.md#listrecipes) | **Get** /recipes | List Recipes
 *DefaultApi* | [**ListRedirectRules**](docs/DefaultApi.md#listredirectrules) | **Get** /servers/{serverId}/sites/{siteId}/redirect-rules | List Redirect Rules
-*DefaultApi* | [**ListRules**](docs/DefaultApi.md#listrules) | **Get** /servers/{serverId}/firewall-rules | List Rules
 *DefaultApi* | [**ListSecurityRules**](docs/DefaultApi.md#listsecurityrules) | **Get** /servers/{serverId}/sites/{siteId}/security-rules | List Security Rules
 *DefaultApi* | [**ListServers**](docs/DefaultApi.md#listservers) | **Get** /servers | List Servers
 *DefaultApi* | [**ListSites**](docs/DefaultApi.md#listsites) | **Get** /servers/{serverId}/sites | List Sites
-*DefaultApi* | [**ListUsers**](docs/DefaultApi.md#listusers) | **Get** /servers/{serverId}/database-users | List Users
 *DefaultApi* | [**ListWorkers**](docs/DefaultApi.md#listworkers) | **Get** /servers/{serverId}/sites/{siteId}/workers | List Workers
 *DefaultApi* | [**LoadBalancing**](docs/DefaultApi.md#loadbalancing) | **Get** /servers/{serverId}/sites/{siteId}/balancing | Load Balancing
 *DefaultApi* | [**ObtainALetsEncryptCertificate**](docs/DefaultApi.md#obtainaletsencryptcertificate) | **Post** /servers/{serverId}/sites/{siteId}/certificates/letsencrypt | Obtain A LetsEncrypt Certificate
@@ -143,7 +144,6 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**RevokeForgeAccessToServer**](docs/DefaultApi.md#revokeforgeaccesstoserver) | **Post** /servers/{id}/revoke | Revoke Forge access to server
 *DefaultApi* | [**RunBackupConfiguration**](docs/DefaultApi.md#runbackupconfiguration) | **Post** /servers/{serverId}/backup-configs/{backupConfigurationId} | Run Backup Configuration
 *DefaultApi* | [**RunRecipe**](docs/DefaultApi.md#runrecipe) | **Post** /recipes/{recipeId}/run | Run Recipe
-*DefaultApi* | [**Show**](docs/DefaultApi.md#show) | **Get** /user | show
 *DefaultApi* | [**SiteLog**](docs/DefaultApi.md#sitelog) | **Get** /servers/{serverId}/sites/{siteId}/logs | Site Log
 *DefaultApi* | [**StartService**](docs/DefaultApi.md#startservice) | **Post** /servers/{id}/services/start | Start Service
 *DefaultApi* | [**StopMySQL**](docs/DefaultApi.md#stopmysql) | **Post** /servers/{id}/mysql/stop | Stop MySQL
@@ -156,6 +156,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**UninstallWordPress**](docs/DefaultApi.md#uninstallwordpress) | **Delete** /servers/{serverId}/sites/{siteId}/wordpress | Uninstall WordPress
 *DefaultApi* | [**UpdateBackupConfiguration**](docs/DefaultApi.md#updatebackupconfiguration) | **Put** /servers/{serverId}/backup-configs/{backupConfigurationId} | Update Backup Configuration
 *DefaultApi* | [**UpdateDatabasePassword**](docs/DefaultApi.md#updatedatabasepassword) | **Put** /servers/{serverId}/database-password | Update Database Password
+*DefaultApi* | [**UpdateDatabaseUser**](docs/DefaultApi.md#updatedatabaseuser) | **Put** /servers/{serverId}/database-users/{userId} | Update Database User
 *DefaultApi* | [**UpdateDeploymentScript**](docs/DefaultApi.md#updatedeploymentscript) | **Put** /servers/{serverId}/sites/{siteId}/deployment/script | Update Deployment Script
 *DefaultApi* | [**UpdateEnvFile**](docs/DefaultApi.md#updateenvfile) | **Put** /servers/{serverId}/sites/{siteId}/env | Update .env File
 *DefaultApi* | [**UpdateLoadBalancing**](docs/DefaultApi.md#updateloadbalancing) | **Put** /servers/{serverId}/sites/{siteId}/balancing | Update Load Balancing
@@ -165,7 +166,6 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**UpdateRepository**](docs/DefaultApi.md#updaterepository) | **Put** /servers/{serverId}/sites/{siteId}/git | Update Repository
 *DefaultApi* | [**UpdateServer**](docs/DefaultApi.md#updateserver) | **Put** /servers/{id} | Update Server
 *DefaultApi* | [**UpdateSite**](docs/DefaultApi.md#updatesite) | **Put** /servers/{serverId}/sites/{siteId} | Update Site
-*DefaultApi* | [**UpdateUser**](docs/DefaultApi.md#updateuser) | **Put** /servers/{serverId}/database-users/{userId} | Update User
 *DefaultApi* | [**UpgradePHPPatchVersion**](docs/DefaultApi.md#upgradephppatchversion) | **Post** /servers/{serverId}/php/update | Upgrade PHP Patch Version
 
 ## Documentation For Models

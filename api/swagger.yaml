@@ -11,8 +11,8 @@ security:
 paths:
   /user:
     get:
-      summary: show
-      operationId: show
+      summary: Get User
+      operationId: getUser
       parameters: []
       responses:
         "200":
@@ -1736,8 +1736,8 @@ paths:
           $ref: '#/components/responses/MaintenanceResponses'
   /servers/{serverId}/database-users:
     get:
-      summary: List Users
-      operationId: listUsers
+      summary: List Database Users
+      operationId: listDatabaseUsers
       parameters:
       - name: serverId
         in: path
@@ -1770,8 +1770,8 @@ paths:
         "503":
           $ref: '#/components/responses/MaintenanceResponses'
     post:
-      summary: Create User
-      operationId: createUser
+      summary: Create Database User
+      operationId: createDatabaseUser
       parameters:
       - name: serverId
         in: path
@@ -1811,8 +1811,8 @@ paths:
           $ref: '#/components/responses/MaintenanceResponses'
   /servers/{serverId}/database-users/{userId}:
     get:
-      summary: Get User
-      operationId: getUser
+      summary: Get Database User
+      operationId: getDatabaseUser
       parameters:
       - name: serverId
         in: path
@@ -1853,8 +1853,8 @@ paths:
         "503":
           $ref: '#/components/responses/MaintenanceResponses'
     put:
-      summary: Update User
-      operationId: updateUser
+      summary: Update Database User
+      operationId: updateDatabaseUser
       parameters:
       - name: serverId
         in: path
@@ -1901,8 +1901,8 @@ paths:
         "503":
           $ref: '#/components/responses/MaintenanceResponses'
     delete:
-      summary: Delete User
-      operationId: deleteUser
+      summary: Delete Database User
+      operationId: deleteDatabaseUser
       parameters:
       - name: serverId
         in: path
@@ -4842,8 +4842,8 @@ paths:
         "503":
           $ref: '#/components/responses/MaintenanceResponses'
     post:
-      summary: Create
-      operationId: create
+      summary: Create Webhook
+      operationId: createWebhook
       parameters:
       - name: server_id
         in: path

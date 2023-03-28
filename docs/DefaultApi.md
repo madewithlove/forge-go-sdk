@@ -8,10 +8,10 @@ Method | HTTP request | Description
 [**AddSiteAliases**](DefaultApi.md#AddSiteAliases) | **Put** /servers/{serverId}/sites/{siteId}/aliases | Add Site Aliases
 [**ChangeSitePHPVersion**](DefaultApi.md#ChangeSitePHPVersion) | **Put** /servers/{serverId}/sites/{siteId}/php | Change Site PHP Version
 [**CloningAnExistingCertificate**](DefaultApi.md#CloningAnExistingCertificate) | **Post** /servers/{serverId}/sites/{siteId}/certificates | Cloning An Existing Certificate
-[**Create**](DefaultApi.md#Create) | **Post** /servers/{server_id}/sites/{site_id}/webhooks | Create
 [**CreateBackupConfiguration**](DefaultApi.md#CreateBackupConfiguration) | **Post** /servers/{serverId}/backup-configs | Create Backup Configuration
 [**CreateDaemon**](DefaultApi.md#CreateDaemon) | **Post** /servers/{serverId}/daemons | Create Daemon
 [**CreateDatabase**](DefaultApi.md#CreateDatabase) | **Post** /servers/{serverId}/databases | Create Database
+[**CreateDatabaseUser**](DefaultApi.md#CreateDatabaseUser) | **Post** /servers/{serverId}/database-users | Create Database User
 [**CreateDeployKey**](DefaultApi.md#CreateDeployKey) | **Post** /servers/{serverId}/sites/{siteId}/deploy-key | Create Deploy Key
 [**CreateFirewallRule**](DefaultApi.md#CreateFirewallRule) | **Post** /servers/{serverId}/firewall-rules | Create Firewall Rule
 [**CreateJob**](DefaultApi.md#CreateJob) | **Post** /servers/{serverId}/jobs | Create Job
@@ -23,13 +23,14 @@ Method | HTTP request | Description
 [**CreateServer**](DefaultApi.md#CreateServer) | **Post** /servers | Create Server
 [**CreateSite**](DefaultApi.md#CreateSite) | **Post** /servers/{serverId}/sites | Create Site
 [**CreateTemplate**](DefaultApi.md#CreateTemplate) | **Post** /servers/{serverId}/nginx/templates | Create Template
-[**CreateUser**](DefaultApi.md#CreateUser) | **Post** /servers/{serverId}/database-users | Create User
+[**CreateWebhook**](DefaultApi.md#CreateWebhook) | **Post** /servers/{server_id}/sites/{site_id}/webhooks | Create Webhook
 [**CreateWorker**](DefaultApi.md#CreateWorker) | **Post** /servers/{serverId}/sites/{siteId}/workers | Create Worker
 [**DeleteBackup**](DefaultApi.md#DeleteBackup) | **Delete** /servers/{serverId}/backup-configs/{backupConfigurationId}/backups/{backupId} | Delete Backup
 [**DeleteBackupConfiguration**](DefaultApi.md#DeleteBackupConfiguration) | **Delete** /servers/{serverId}/backup-configs/{backupConfigurationId} | Delete Backup Configuration
 [**DeleteCertificate**](DefaultApi.md#DeleteCertificate) | **Delete** /servers/{serverId}/sites/{siteId}/certificates/{id} | Delete Certificate
 [**DeleteDaemon**](DefaultApi.md#DeleteDaemon) | **Delete** /servers/{serverId}/daemons/{daemonId} | Delete Daemon
 [**DeleteDatabase**](DefaultApi.md#DeleteDatabase) | **Delete** /servers/{serverId}/databases/{databaseId} | Delete Database
+[**DeleteDatabaseUser**](DefaultApi.md#DeleteDatabaseUser) | **Delete** /servers/{serverId}/database-users/{userId} | Delete Database User
 [**DeleteDeployKey**](DefaultApi.md#DeleteDeployKey) | **Delete** /servers/{serverId}/sites/{siteId}/deploy-key | Delete Deploy Key
 [**DeleteFirewallRule**](DefaultApi.md#DeleteFirewallRule) | **Delete** /servers/{serverId}/firewall-rules/{ruleId} | Delete Firewall Rule
 [**DeleteJob**](DefaultApi.md#DeleteJob) | **Delete** /servers/{serverId}/jobs/{jobId} | Delete Job
@@ -41,7 +42,6 @@ Method | HTTP request | Description
 [**DeleteSecurityRule**](DefaultApi.md#DeleteSecurityRule) | **Delete** /servers/{serverId}/sites/{siteId}/security-rules/{id} | Delete Security Rule
 [**DeleteServer**](DefaultApi.md#DeleteServer) | **Delete** /servers/{id} | Delete Server
 [**DeleteSite**](DefaultApi.md#DeleteSite) | **Delete** /servers/{serverId}/sites/{siteId} | Delete Site
-[**DeleteUser**](DefaultApi.md#DeleteUser) | **Delete** /servers/{serverId}/database-users/{userId} | Delete User
 [**DeleteWebhook**](DefaultApi.md#DeleteWebhook) | **Delete** /servers/{server_id}/sites/{site_id}/webhooks/{id} | Delete Webhook
 [**DeleteWorker**](DefaultApi.md#DeleteWorker) | **Delete** /servers/{serverId}/sites/{siteId}/workers/{id} | Delete Worker
 [**DeployNow**](DefaultApi.md#DeployNow) | **Post** /servers/{serverId}/sites/{siteId}/deployment/deploy | Deploy Now
@@ -56,6 +56,7 @@ Method | HTTP request | Description
 [**GetCredentials**](DefaultApi.md#GetCredentials) | **Get** /credentials | Get Credentials
 [**GetDaemon**](DefaultApi.md#GetDaemon) | **Get** /servers/{serverId}/daemons/{daemonId} | Get Daemon
 [**GetDatabase**](DefaultApi.md#GetDatabase) | **Get** /servers/{serverId}/databases/{databaseId} | Get Database
+[**GetDatabaseUser**](DefaultApi.md#GetDatabaseUser) | **Get** /servers/{serverId}/database-users/{userId} | Get Database User
 [**GetDeployment**](DefaultApi.md#GetDeployment) | **Get** /servers/{serverId}/sites/{siteId}/deployment-history/{deploymentId} | Get Deployment
 [**GetDeploymentLog**](DefaultApi.md#GetDeploymentLog) | **Get** /servers/{serverId}/sites/{siteId}/deployment/log | Get Deployment Log
 [**GetDeploymentOutput**](DefaultApi.md#GetDeploymentOutput) | **Get** /servers/{serverId}/sites/{siteId}/deployment-history/{deploymentId}/output | Get Deployment Output
@@ -76,7 +77,7 @@ Method | HTTP request | Description
 [**GetServer**](DefaultApi.md#GetServer) | **Get** /servers/{id} | Get Server
 [**GetSigningRequest**](DefaultApi.md#GetSigningRequest) | **Get** /servers/{serverId}/sites/{siteId}/certificates/{id}/csr | Get Signing Request
 [**GetSite**](DefaultApi.md#GetSite) | **Get** /servers/{serverId}/sites/{siteId} | Get Site
-[**GetUser**](DefaultApi.md#GetUser) | **Get** /servers/{serverId}/database-users/{userId} | Get User
+[**GetUser**](DefaultApi.md#GetUser) | **Get** /user | Get User
 [**GetWebhook**](DefaultApi.md#GetWebhook) | **Get** /servers/{server_id}/sites/{site_id}/webhooks/{id} | Get Webhook
 [**GetWebhooks**](DefaultApi.md#GetWebhooks) | **Get** /servers/{server_id}/sites/{site_id}/webhooks | Get Webhooks
 [**GetWorker**](DefaultApi.md#GetWorker) | **Get** /servers/{serverId}/sites/{siteId}/workers/{id} | Get Worker
@@ -91,6 +92,7 @@ Method | HTTP request | Description
 [**ListCertificates**](DefaultApi.md#ListCertificates) | **Get** /servers/{serverId}/sites/{siteId}/certificates | List Certificates
 [**ListCommandHistory**](DefaultApi.md#ListCommandHistory) | **Get** /servers/{serverId}/sites/{siteId}/commands | List Command History
 [**ListDaemons**](DefaultApi.md#ListDaemons) | **Get** /servers/{serverId}/daemons | List Daemons
+[**ListDatabaseUsers**](DefaultApi.md#ListDatabaseUsers) | **Get** /servers/{serverId}/database-users | List Database Users
 [**ListDatabases**](DefaultApi.md#ListDatabases) | **Get** /servers/{serverId}/databases | List Databases
 [**ListDeployments**](DefaultApi.md#ListDeployments) | **Get** /servers/{serverId}/sites/{siteId}/deployment-history | List Deployments
 [**ListFirewallRules**](DefaultApi.md#ListFirewallRules) | **Get** /servers/{serverId}/firewall-rules | List Firewall Rules
@@ -104,7 +106,6 @@ Method | HTTP request | Description
 [**ListSecurityRules**](DefaultApi.md#ListSecurityRules) | **Get** /servers/{serverId}/sites/{siteId}/security-rules | List Security Rules
 [**ListServers**](DefaultApi.md#ListServers) | **Get** /servers | List Servers
 [**ListSites**](DefaultApi.md#ListSites) | **Get** /servers/{serverId}/sites | List Sites
-[**ListUsers**](DefaultApi.md#ListUsers) | **Get** /servers/{serverId}/database-users | List Users
 [**ListWorkers**](DefaultApi.md#ListWorkers) | **Get** /servers/{serverId}/sites/{siteId}/workers | List Workers
 [**LoadBalancing**](DefaultApi.md#LoadBalancing) | **Get** /servers/{serverId}/sites/{siteId}/balancing | Load Balancing
 [**ObtainALetsEncryptCertificate**](DefaultApi.md#ObtainALetsEncryptCertificate) | **Post** /servers/{serverId}/sites/{siteId}/certificates/letsencrypt | Obtain A LetsEncrypt Certificate
@@ -126,7 +127,6 @@ Method | HTTP request | Description
 [**RevokeForgeAccessToServer**](DefaultApi.md#RevokeForgeAccessToServer) | **Post** /servers/{id}/revoke | Revoke Forge access to server
 [**RunBackupConfiguration**](DefaultApi.md#RunBackupConfiguration) | **Post** /servers/{serverId}/backup-configs/{backupConfigurationId} | Run Backup Configuration
 [**RunRecipe**](DefaultApi.md#RunRecipe) | **Post** /recipes/{recipeId}/run | Run Recipe
-[**Show**](DefaultApi.md#Show) | **Get** /user | show
 [**SiteLog**](DefaultApi.md#SiteLog) | **Get** /servers/{serverId}/sites/{siteId}/logs | Site Log
 [**StartService**](DefaultApi.md#StartService) | **Post** /servers/{id}/services/start | Start Service
 [**StopMySQL**](DefaultApi.md#StopMySQL) | **Post** /servers/{id}/mysql/stop | Stop MySQL
@@ -139,6 +139,7 @@ Method | HTTP request | Description
 [**UninstallWordPress**](DefaultApi.md#UninstallWordPress) | **Delete** /servers/{serverId}/sites/{siteId}/wordpress | Uninstall WordPress
 [**UpdateBackupConfiguration**](DefaultApi.md#UpdateBackupConfiguration) | **Put** /servers/{serverId}/backup-configs/{backupConfigurationId} | Update Backup Configuration
 [**UpdateDatabasePassword**](DefaultApi.md#UpdateDatabasePassword) | **Put** /servers/{serverId}/database-password | Update Database Password
+[**UpdateDatabaseUser**](DefaultApi.md#UpdateDatabaseUser) | **Put** /servers/{serverId}/database-users/{userId} | Update Database User
 [**UpdateDeploymentScript**](DefaultApi.md#UpdateDeploymentScript) | **Put** /servers/{serverId}/sites/{siteId}/deployment/script | Update Deployment Script
 [**UpdateEnvFile**](DefaultApi.md#UpdateEnvFile) | **Put** /servers/{serverId}/sites/{siteId}/env | Update .env File
 [**UpdateLoadBalancing**](DefaultApi.md#UpdateLoadBalancing) | **Put** /servers/{serverId}/sites/{siteId}/balancing | Update Load Balancing
@@ -148,7 +149,6 @@ Method | HTTP request | Description
 [**UpdateRepository**](DefaultApi.md#UpdateRepository) | **Put** /servers/{serverId}/sites/{siteId}/git | Update Repository
 [**UpdateServer**](DefaultApi.md#UpdateServer) | **Put** /servers/{id} | Update Server
 [**UpdateSite**](DefaultApi.md#UpdateSite) | **Put** /servers/{serverId}/sites/{siteId} | Update Site
-[**UpdateUser**](DefaultApi.md#UpdateUser) | **Put** /servers/{serverId}/database-users/{userId} | Update User
 [**UpgradePHPPatchVersion**](DefaultApi.md#UpgradePHPPatchVersion) | **Post** /servers/{serverId}/php/update | Upgrade PHP Patch Version
 
 # **ActivateCertificate**
@@ -263,33 +263,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Create**
-> Create(ctx, serverId, siteId)
-Create
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **serverId** | **int32**| The ID of the server. | 
-  **siteId** | **int32**| The ID of the site. | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **CreateBackupConfiguration**
 > Backup CreateBackupConfiguration(ctx, body, serverId)
 Create Backup Configuration
@@ -359,6 +332,33 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Database**](Database.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **CreateDatabaseUser**
+> User CreateDatabaseUser(ctx, body, serverId)
+Create Database User
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **body** | [**ServerIdDatabaseusersBody**](ServerIdDatabaseusersBody.md)|  | 
+  **serverId** | **int32**| The ID of the server. | 
+
+### Return type
+
+[**User**](User.md)
 
 ### Authorization
 
@@ -668,21 +668,21 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **CreateUser**
-> User CreateUser(ctx, body, serverId)
-Create User
+# **CreateWebhook**
+> CreateWebhook(ctx, serverId, siteId)
+Create Webhook
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServerIdDatabaseusersBody**](ServerIdDatabaseusersBody.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
+  **siteId** | **int32**| The ID of the site. | 
 
 ### Return type
 
-[**User**](User.md)
+ (empty response body)
 
 ### Authorization
 
@@ -690,8 +690,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -844,6 +844,33 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **serverId** | **int32**| The ID of the server. | 
   **databaseId** | **int32**| The ID of the database. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **DeleteDatabaseUser**
+> DeleteDatabaseUser(ctx, serverId, userId)
+Delete Database User
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **serverId** | **int32**| The ID of the server. | 
+  **userId** | **int32**| The ID of the user. | 
 
 ### Return type
 
@@ -1141,33 +1168,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **DeleteUser**
-> DeleteUser(ctx, serverId, userId)
-Delete User
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **serverId** | **int32**| The ID of the server. | 
-  **userId** | **int32**| The ID of the user. | 
 
 ### Return type
 
@@ -1548,6 +1548,33 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Database**](Database.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **GetDatabaseUser**
+> User GetDatabaseUser(ctx, serverId, userId)
+Get Database User
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **serverId** | **int32**| The ID of the server. | 
+  **userId** | **int32**| The ID of the user. | 
+
+### Return type
+
+[**User**](User.md)
 
 ### Authorization
 
@@ -2097,16 +2124,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetUser**
-> User GetUser(ctx, serverId, userId)
+> User GetUser(ctx, )
 Get User
 
 ### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **serverId** | **int32**| The ID of the server. | 
-  **userId** | **int32**| The ID of the user. | 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -2505,6 +2527,32 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **ListDatabaseUsers**
+> []User ListDatabaseUsers(ctx, serverId)
+List Database Users
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **serverId** | **int32**| The ID of the server. | 
+
+### Return type
+
+[**[]User**](array.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **ListDatabases**
 > []Database ListDatabases(ctx, serverId)
 List Databases
@@ -2826,32 +2874,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]Site**](array.md)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ListUsers**
-> []User ListUsers(ctx, serverId)
-List Users
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **serverId** | **int32**| The ID of the server. | 
-
-### Return type
-
-[**[]User**](array.md)
 
 ### Authorization
 
@@ -3424,28 +3446,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **Show**
-> User Show(ctx, )
-show
-
-### Required Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**User**](User.md)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **SiteLog**
 > SiteLog(ctx, serverId, siteId)
 Site Log
@@ -3764,6 +3764,34 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **UpdateDatabaseUser**
+> User UpdateDatabaseUser(ctx, body, serverId, userId)
+Update Database User
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **body** | [**DatabaseusersUserIdBody**](DatabaseusersUserIdBody.md)|  | 
+  **serverId** | **int32**| The ID of the server. | 
+  **userId** | **int32**| The ID of the user. | 
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[BearerAuth](../README.md#BearerAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **UpdateDeploymentScript**
 > UpdateDeploymentScript(ctx, body, serverId, siteId)
 Update Deployment Script
@@ -4001,34 +4029,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Site**](Site.md)
-
-### Authorization
-
-[BearerAuth](../README.md#BearerAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **UpdateUser**
-> User UpdateUser(ctx, body, serverId, userId)
-Update User
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**DatabaseusersUserIdBody**](DatabaseusersUserIdBody.md)|  | 
-  **serverId** | **int32**| The ID of the server. | 
-  **userId** | **int32**| The ID of the user. | 
-
-### Return type
-
-[**User**](User.md)
 
 ### Authorization
 
