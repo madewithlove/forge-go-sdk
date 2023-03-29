@@ -3,7 +3,7 @@ info:
   title: Laravel Forge
   description: The Forge API allows you to create and interact with servers and sites
     on Laravel Forge through a simple REST API.
-  version: 1.0.0
+  version: 0.0.2
 servers:
 - url: https://forge.laravel.com/api/v1
 security:
