@@ -3,7 +3,7 @@ info:
   title: Laravel Forge
   description: The Forge API allows you to create and interact with servers and sites
     on Laravel Forge through a simple REST API.
-  version: 0.0.2
+  version: 1.0.0
 servers:
 - url: https://forge.laravel.com/api/v1
 security:
@@ -71,7 +71,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/servers_body'
+              $ref: '#/components/schemas/CreateServer'
         required: true
       responses:
         "200":
@@ -146,7 +146,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/servers_id_body'
+              $ref: '#/components/schemas/UpdateServer'
         required: true
       responses:
         "200":
@@ -217,7 +217,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/serverId_databasepassword_body'
+              $ref: '#/components/schemas/UpdateDatabasePassword'
         required: true
       responses:
         "200":
@@ -370,7 +370,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/servers_events_body'
+              $ref: '#/components/schemas/GetRecentEvents'
         required: true
       responses:
         "200":
@@ -724,7 +724,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/php_reboot_body'
+              $ref: '#/components/schemas/RebootPHP'
         required: true
       responses:
         "200":
@@ -761,7 +761,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/blackfire_install_body'
+              $ref: '#/components/schemas/InstallBlackfire'
         required: true
       responses:
         "200":
@@ -829,7 +829,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/papertrail_install_body'
+              $ref: '#/components/schemas/InstallPapertrail'
         required: true
       responses:
         "200":
@@ -931,7 +931,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/serverId_daemons_body'
+              $ref: '#/components/schemas/CreateDaemon'
         required: true
       responses:
         "200":
@@ -1126,7 +1126,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/serverId_firewallrules_body'
+              $ref: '#/components/schemas/CreateFirewallRule'
         required: true
       responses:
         "200":
@@ -1282,7 +1282,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/serverId_jobs_body'
+              $ref: '#/components/schemas/CreateJob'
         required: true
       responses:
         "200":
@@ -1598,7 +1598,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/serverId_databases_body'
+              $ref: '#/components/schemas/CreateDatabase'
         required: true
       responses:
         "200":
@@ -1785,7 +1785,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/serverId_databaseusers_body'
+              $ref: '#/components/schemas/CreateDatabaseUser'
         required: true
       responses:
         "200":
@@ -1876,7 +1876,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/databaseusers_userId_body'
+              $ref: '#/components/schemas/UpdateDatabaseUser'
         required: true
       responses:
         "200":
@@ -1955,7 +1955,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/nginx_templates_body'
+              $ref: '#/components/schemas/CreateTemplate'
         required: true
       responses:
         "200":
@@ -2188,7 +2188,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/serverId_sites_body'
+              $ref: '#/components/schemas/CreateSite'
         required: true
       responses:
         "200":
@@ -2279,7 +2279,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/sites_siteId_body'
+              $ref: '#/components/schemas/UpdateSite'
         required: true
       responses:
         "200":
@@ -2366,7 +2366,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_php_body'
+              $ref: '#/components/schemas/ChangeSitePHPVersion'
         required: true
       responses:
         "200":
@@ -2411,7 +2411,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_aliases_body'
+              $ref: '#/components/schemas/AddSiteAliases'
         required: true
       responses:
         "200":
@@ -2502,7 +2502,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_balancing_body'
+              $ref: '#/components/schemas/UpdateLoadBalancing'
         required: true
       responses:
         "200":
@@ -2628,7 +2628,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_certificates_body'
+              $ref: '#/components/schemas/CloningAnExistingCertificate'
         required: true
       responses:
         "200":
@@ -2872,7 +2872,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/id_install_body'
+              $ref: '#/components/schemas/InstallCertificate'
         required: true
       responses:
         "200":
@@ -2990,7 +2990,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/serverId_keys_body'
+              $ref: '#/components/schemas/CreateKey'
         required: true
       responses:
         "200":
@@ -3162,7 +3162,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_workers_body'
+              $ref: '#/components/schemas/CreateWorker'
         required: true
       responses:
         "200":
@@ -3397,7 +3397,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_redirectrules_body'
+              $ref: '#/components/schemas/CreateRedirectRule'
         required: true
       responses:
         "200":
@@ -3585,7 +3585,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_securityrules_body'
+              $ref: '#/components/schemas/CreateSecurityRule'
         required: true
       responses:
         "200":
@@ -3846,7 +3846,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/deployment_script_body'
+              $ref: '#/components/schemas/UpdateDeploymentScript'
         required: true
       responses:
         "200":
@@ -4187,7 +4187,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_nginx_body'
+              $ref: '#/components/schemas/UpdateNginxConfiguration'
         required: true
       responses:
         "200":
@@ -4270,7 +4270,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_env_body'
+              $ref: '#/components/schemas/Update.envFile'
         required: true
       responses:
         "200":
@@ -4315,7 +4315,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_git_body'
+              $ref: '#/components/schemas/UpdateRepository'
         required: true
       responses:
         "200":
@@ -4359,7 +4359,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_git_body_1'
+              $ref: '#/components/schemas/InstallNewGitProject'
         required: true
       responses:
         "200":
@@ -4561,7 +4561,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_commands_body'
+              $ref: '#/components/schemas/ExecuteCommand'
         required: true
       responses:
         "200":
@@ -4657,7 +4657,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_wordpress_body'
+              $ref: '#/components/schemas/InstallWordPress'
         required: true
       responses:
         "200":
@@ -4740,7 +4740,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/siteId_phpmyadmin_body'
+              $ref: '#/components/schemas/InstallPhpMyAdmin'
         required: true
       responses:
         "200":
@@ -5011,7 +5011,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/recipes_body'
+              $ref: '#/components/schemas/CreateRecipe'
         required: true
       responses:
         "200":
@@ -5086,7 +5086,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/recipes_recipeId_body'
+              $ref: '#/components/schemas/UpdateRecipe'
         required: true
       responses:
         "200":
@@ -5157,7 +5157,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/recipeId_run_body'
+              $ref: '#/components/schemas/RunRecipe'
         required: true
       responses:
         "200":
@@ -5278,7 +5278,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/serverId_backupconfigs_body'
+              $ref: '#/components/schemas/CreateBackupConfiguration'
         required: true
       responses:
         "200":
@@ -5369,7 +5369,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/backupconfigs_backupConfigurationId_body'
+              $ref: '#/components/schemas/UpdateBackupConfiguration'
         required: true
       responses:
         "200":
@@ -5502,7 +5502,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/backups_backupId_body'
+              $ref: '#/components/schemas/RestoreBackup'
         required: true
       responses:
         "200":
@@ -5615,7 +5615,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/serverId_monitors_body'
+              $ref: '#/components/schemas/CreateMonitor'
         required: true
       responses:
         "200":
@@ -5836,11 +5836,95 @@ components:
         id: 0
         region: region
         credential_id: 6
+    CreateServer:
+      properties:
+        ubuntu_version:
+          type: string
+        type:
+          type: string
+        provider:
+          type: string
+        credential_id:
+          type: string
+        region:
+          type: string
+        ip_address:
+          type: string
+        private_ip_address:
+          type: string
+        php_version:
+          type: string
+        database:
+          type: string
+        maria:
+          type: string
+        database_type:
+          type: string
+        network:
+          type: string
+        recipe_id:
+          type: string
+        aws_vpc_id:
+          type: string
+        aws_subnet_id:
+          type: string
+        aws_vpc_name:
+          type: string
+        hetzner_network_id:
+          type: string
+        ocean2_vpc_uuid:
+          type: string
+        ocean2_vpc_name:
+          type: string
+        vultr2_network_id:
+          type: string
+        vultr2_network_name:
+          type: string
     Servers:
       type: array
       items:
         $ref: '#/components/schemas/Server'
       x-schema-name: Servers
+    UpdateServer:
+      properties:
+        name:
+          type: string
+        ip_address:
+          type: string
+        private_ip_address:
+          type: string
+        max_upload_size:
+          type: string
+        max_execution_time:
+          type: string
+        network:
+          type: string
+        timezone:
+          type: string
+        tags:
+          type: string
+    UpdateDatabasePassword:
+      properties:
+        password:
+          type: string
+    GetRecentEvents:
+      properties:
+        server_id:
+          type: string
+    RebootPHP:
+      properties:
+        version:
+          type: string
+    InstallBlackfire:
+      properties:
+        server_id:
+          type: string
+        server_token:
+          type: string
+    InstallPapertrail:
+      properties:
+        host:
+          type: string
     Daemon:
       properties:
         id:
@@ -5874,6 +5958,14 @@ components:
         stopwaitsecs: 5
         command: command
         status: status
+    CreateDaemon:
+      properties:
+        command:
+          type: string
+        user:
+          type: string
+        directory:
+          type: string
     Daemons:
       type: array
       items:
@@ -5903,6 +5995,16 @@ components:
         ip_address: ip_address
         type: type
         status: status
+    CreateFirewallRule:
+      properties:
+        name:
+          type: string
+        ip_address:
+          type: string
+        port:
+          type: string
+        type:
+          type: string
     Rules:
       type: array
       items:
@@ -5932,6 +6034,20 @@ components:
         command: command
         frequency: frequency
         status: status
+    CreateJob:
+      properties:
+        frequency:
+          type: string
+        minute:
+          type: string
+        hour:
+          type: string
+        day:
+          type: string
+        month:
+          type: string
+        weekday:
+          type: string
     Jobs:
       type: array
       items:
@@ -5952,16 +6068,32 @@ components:
         created_at: created_at
         id: 0
         status: status
+    CreateDatabase:
+      properties:
+        user:
+          type: string
+        password:
+          type: string
     Databases:
       type: array
       items:
         $ref: '#/components/schemas/Database'
       x-schema-name: Databases
+    CreateDatabaseUser:
+      properties:
+        databases:
+          type: string
+        password:
+          type: string
     Users:
       type: array
       items:
         $ref: '#/components/schemas/User'
       x-schema-name: Users
+    UpdateDatabaseUser:
+      properties:
+        databases:
+          type: string
     Template:
       properties:
         id:
@@ -5977,6 +6109,12 @@ components:
         id: 0
         server_id: 6
         content: content
+    CreateTemplate:
+      properties:
+        name:
+          type: string
+        content:
+          type: string
     Templates:
       type: array
       items:
@@ -6056,11 +6194,51 @@ components:
         telegram_chat_title: telegram_chat_title
         username: username
         status: status
+    CreateSite:
+      properties:
+        domain:
+          type: string
+        project_type:
+          type: string
+        aliases:
+          type: string
+        directory:
+          type: string
+        isolated:
+          type: string
+        username:
+          type: string
+        database:
+          type: string
+        php_version:
+          type: string
+        nginx_template:
+          type: string
     Sites:
       type: array
       items:
         $ref: '#/components/schemas/Site'
       x-schema-name: Sites
+    UpdateSite:
+      properties:
+        directory:
+          type: string
+        name:
+          type: string
+        php_version:
+          type: string
+        aliases:
+          type: string
+        wildcards:
+          type: string
+    ChangeSitePHPVersion:
+      properties:
+        version:
+          type: string
+    AddSiteAliases:
+      properties:
+        aliases:
+          type: string
     Nodes:
       type: array
       items:
@@ -6084,6 +6262,12 @@ components:
         weight: 6
         server_id: 0
         down: down
+    UpdateLoadBalancing:
+      properties:
+        servers:
+          type: string
+        method:
+          type: string
     Certificate:
       properties:
         domain:
@@ -6105,11 +6289,47 @@ components:
         created_at: created_at
         active: active
         id: 0
+    CreateCertificate:
+      properties:
+        type:
+          type: string
+        domain:
+          type: string
+        country:
+          type: string
+        state:
+          type: string
+        city:
+          type: string
+        organization:
+          type: string
+        department:
+          type: string
+    InstallingAnExistingCertificate:
+      properties:
+        type:
+          type: string
+        key:
+          type: string
+        certificate:
+          type: string
+    CloningAnExistingCertificate:
+      properties:
+        type:
+          type: string
+        certificate_id:
+          type: string
     Certificates:
       type: array
       items:
         $ref: '#/components/schemas/Certificate'
       x-schema-name: Certificates
+    InstallCertificate:
+      properties:
+        certificate:
+          type: string
+        add_intermediates:
+          type: string
     Key:
       properties:
         id:
@@ -6128,6 +6348,14 @@ components:
         id: 0
         username: username
         status: status
+    CreateKey:
+      properties:
+        name:
+          type: string
+        key:
+          type: string
+        username:
+          type: string
     Keys:
       type: array
       items:
@@ -6181,6 +6409,28 @@ components:
         stopwaitsecs: stopwaitsecs
         queue: queue
         status: status
+    CreateWorker:
+      properties:
+        connection:
+          type: string
+        timeout:
+          type: string
+        sleep:
+          type: string
+        tries:
+          type: string
+        processes:
+          type: string
+        stopwaitsecs:
+          type: string
+        daemon:
+          type: string
+        force:
+          type: string
+        php_version:
+          type: string
+        queue:
+          type: string
     Workers:
       type: array
       items:
@@ -6204,6 +6454,14 @@ components:
         id: 0
         to: to
         type: type
+    CreateRedirectRule:
+      properties:
+        from:
+          type: string
+        to:
+          type: string
+        type:
+          type: string
     RedirectRules:
       type: array
       items:
@@ -6231,11 +6489,23 @@ components:
         name: name
         created_at: created_at
         id: 0
+    CreateSecurityRule:
+      properties:
+        name:
+          type: string
+        path:
+          type: string
+        credentials:
+          type: string
     SecurityRules:
       type: array
       items:
         $ref: '#/components/schemas/SecurityRule'
       x-schema-name: SecurityRules
+    UpdateDeploymentScript:
+      properties:
+        ? ""
+        : type: string
     Deployments:
       type: array
       items:
@@ -6277,6 +6547,32 @@ components:
         commit_hash: commit_hash
         ended_at: ended_at
         status: status
+    UpdateNginxConfiguration:
+      properties:
+        content:
+          type: string
+    Update.envFile:
+      properties:
+        content:
+          type: string
+    InstallNewGitProject:
+      properties:
+        provider:
+          type: string
+        composer:
+          type: string
+    UpdateRepository:
+      properties:
+        provider:
+          type: string
+        repository:
+          type: string
+        branch:
+          type: string
+    ExecuteCommand:
+      properties:
+        command:
+          type: string
     Commands:
       type: array
       items:
@@ -6318,6 +6614,18 @@ components:
         server_id: 6
         command: command
         status: status
+    InstallWordPress:
+      properties:
+        database:
+          type: string
+        user:
+          type: string
+    InstallPhpMyAdmin:
+      properties:
+        database:
+          type: string
+        user:
+          type: string
     Webhooks:
       type: array
       items:
@@ -6353,11 +6661,33 @@ components:
         id: 0
         user: user
         script: script
+    CreateRecipe:
+      properties:
+        name:
+          type: string
+        user:
+          type: string
+        script:
+          type: string
     Recipes:
       type: array
       items:
         $ref: '#/components/schemas/Recipe'
       x-schema-name: Recipes
+    UpdateRecipe:
+      properties:
+        name:
+          type: string
+        user:
+          type: string
+        script:
+          type: string
+    RunRecipe:
+      properties:
+        servers:
+          type: string
+        notify:
+          type: string
     Regions:
       properties:
         ocean2:
@@ -6444,6 +6774,42 @@ components:
         backups:
         - 6
         - 6
+    CreateBackupConfiguration:
+      properties:
+        provider:
+          type: string
+        credentials:
+          type: string
+        frequency:
+          type: string
+        directory:
+          type: string
+        email:
+          type: string
+        retention:
+          type: string
+        databases:
+          type: string
+    UpdateBackupConfiguration:
+      properties:
+        provider:
+          type: string
+        credentials:
+          type: string
+        frequency:
+          type: string
+        directory:
+          type: string
+        email:
+          type: string
+        retention:
+          type: string
+        databases:
+          type: string
+    RestoreBackup:
+      properties:
+        database:
+          type: string
     Monitor:
       properties:
         id:
@@ -6471,75 +6837,17 @@ components:
         type: type
         operator: operator
         status: status
-    servers_body:
+    CreateMonitor:
       properties:
-        ubuntu_version:
-          type: string
         type:
           type: string
-        provider:
+        operator:
           type: string
-        credential_id:
+        threshold:
           type: string
-        region:
+        minutes:
           type: string
-        ip_address:
-          type: string
-        private_ip_address:
-          type: string
-        php_version:
-          type: string
-        database:
-          type: string
-        maria:
-          type: string
-        database_type:
-          type: string
-        network:
-          type: string
-        recipe_id:
-          type: string
-        aws_vpc_id:
-          type: string
-        aws_subnet_id:
-          type: string
-        aws_vpc_name:
-          type: string
-        hetzner_network_id:
-          type: string
-        ocean2_vpc_uuid:
-          type: string
-        ocean2_vpc_name:
-          type: string
-        vultr2_network_id:
-          type: string
-        vultr2_network_name:
-          type: string
-    servers_id_body:
-      properties:
-        name:
-          type: string
-        ip_address:
-          type: string
-        private_ip_address:
-          type: string
-        max_upload_size:
-          type: string
-        max_execution_time:
-          type: string
-        network:
-          type: string
-        timezone:
-          type: string
-        tags:
-          type: string
-    serverId_databasepassword_body:
-      properties:
-        password:
-          type: string
-    servers_events_body:
-      properties:
-        server_id:
+        notify:
           type: string
     inline_response_200:
       properties:
@@ -6559,52 +6867,6 @@ components:
         description: description
         created_at: created_at
         server_id: 0
-    php_reboot_body:
-      properties:
-        version:
-          type: string
-    blackfire_install_body:
-      properties:
-        server_id:
-          type: string
-        server_token:
-          type: string
-    papertrail_install_body:
-      properties:
-        host:
-          type: string
-    serverId_daemons_body:
-      properties:
-        command:
-          type: string
-        user:
-          type: string
-        directory:
-          type: string
-    serverId_firewallrules_body:
-      properties:
-        name:
-          type: string
-        ip_address:
-          type: string
-        port:
-          type: string
-        type:
-          type: string
-    serverId_jobs_body:
-      properties:
-        frequency:
-          type: string
-        minute:
-          type: string
-        hour:
-          type: string
-        day:
-          type: string
-        month:
-          type: string
-        weekday:
-          type: string
     inline_response_200_1:
       properties:
         id:
@@ -6629,244 +6891,6 @@ components:
         binary_name: binary_name
         status: status
         used_on_cli: used_on_cli
-    serverId_databases_body:
-      properties:
-        user:
-          type: string
-        password:
-          type: string
-    serverId_databaseusers_body:
-      properties:
-        databases:
-          type: string
-        password:
-          type: string
-    databaseusers_userId_body:
-      properties:
-        databases:
-          type: string
-    nginx_templates_body:
-      properties:
-        name:
-          type: string
-        content:
-          type: string
-    serverId_sites_body:
-      properties:
-        domain:
-          type: string
-        project_type:
-          type: string
-        aliases:
-          type: string
-        directory:
-          type: string
-        isolated:
-          type: string
-        username:
-          type: string
-        database:
-          type: string
-        php_version:
-          type: string
-        nginx_template:
-          type: string
-    sites_siteId_body:
-      properties:
-        directory:
-          type: string
-        name:
-          type: string
-        php_version:
-          type: string
-        aliases:
-          type: string
-        wildcards:
-          type: string
-    siteId_php_body:
-      properties:
-        version:
-          type: string
-    siteId_aliases_body:
-      properties:
-        aliases:
-          type: string
-    siteId_balancing_body:
-      properties:
-        servers:
-          type: string
-        method:
-          type: string
-    siteId_certificates_body:
-      properties:
-        type:
-          type: string
-        certificate_id:
-          type: string
-    id_install_body:
-      properties:
-        certificate:
-          type: string
-        add_intermediates:
-          type: string
-    serverId_keys_body:
-      properties:
-        name:
-          type: string
-        key:
-          type: string
-        username:
-          type: string
-    siteId_workers_body:
-      properties:
-        connection:
-          type: string
-        timeout:
-          type: string
-        sleep:
-          type: string
-        tries:
-          type: string
-        processes:
-          type: string
-        stopwaitsecs:
-          type: string
-        daemon:
-          type: string
-        force:
-          type: string
-        php_version:
-          type: string
-        queue:
-          type: string
-    siteId_redirectrules_body:
-      properties:
-        from:
-          type: string
-        to:
-          type: string
-        type:
-          type: string
-    siteId_securityrules_body:
-      properties:
-        name:
-          type: string
-        path:
-          type: string
-        credentials:
-          type: string
-    deployment_script_body:
-      properties:
-        ? ""
-        : type: string
-    siteId_nginx_body:
-      properties:
-        content:
-          type: string
-    siteId_env_body:
-      properties:
-        content:
-          type: string
-    siteId_git_body:
-      properties:
-        provider:
-          type: string
-        repository:
-          type: string
-        branch:
-          type: string
-    siteId_git_body_1:
-      properties:
-        provider:
-          type: string
-        composer:
-          type: string
-    siteId_commands_body:
-      properties:
-        command:
-          type: string
-    siteId_wordpress_body:
-      properties:
-        database:
-          type: string
-        user:
-          type: string
-    siteId_phpmyadmin_body:
-      properties:
-        database:
-          type: string
-        user:
-          type: string
-    recipes_body:
-      properties:
-        name:
-          type: string
-        user:
-          type: string
-        script:
-          type: string
-    recipes_recipeId_body:
-      properties:
-        name:
-          type: string
-        user:
-          type: string
-        script:
-          type: string
-    recipeId_run_body:
-      properties:
-        servers:
-          type: string
-        notify:
-          type: string
-    serverId_backupconfigs_body:
-      properties:
-        provider:
-          type: string
-        credentials:
-          type: string
-        frequency:
-          type: string
-        directory:
-          type: string
-        email:
-          type: string
-        retention:
-          type: string
-        databases:
-          type: string
-    backupconfigs_backupConfigurationId_body:
-      properties:
-        provider:
-          type: string
-        credentials:
-          type: string
-        frequency:
-          type: string
-        directory:
-          type: string
-        email:
-          type: string
-        retention:
-          type: string
-        databases:
-          type: string
-    backups_backupId_body:
-      properties:
-        database:
-          type: string
-    serverId_monitors_body:
-      properties:
-        type:
-          type: string
-        operator:
-          type: string
-        threshold:
-          type: string
-        minutes:
-          type: string
-        notify:
-          type: string
   responses:
     OkResponse:
       description: Everything is ok.

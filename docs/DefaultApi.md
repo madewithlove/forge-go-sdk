@@ -188,7 +188,7 @@ Add Site Aliases
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdAliasesBody**](SiteIdAliasesBody.md)|  | 
+  **body** | [**AddSiteAliases**](AddSiteAliases.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -216,7 +216,7 @@ Change Site PHP Version
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdPhpBody**](SiteIdPhpBody.md)|  | 
+  **body** | [**ChangeSitePhpVersion**](ChangeSitePhpVersion.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -244,7 +244,7 @@ Cloning An Existing Certificate
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdCertificatesBody**](SiteIdCertificatesBody.md)|  | 
+  **body** | [**CloningAnExistingCertificate**](CloningAnExistingCertificate.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -272,7 +272,7 @@ Create Backup Configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServerIdBackupconfigsBody**](ServerIdBackupconfigsBody.md)|  | 
+  **body** | [**CreateBackupConfiguration**](CreateBackupConfiguration.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
 
 ### Return type
@@ -299,7 +299,7 @@ Create Daemon
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServerIdDaemonsBody**](ServerIdDaemonsBody.md)|  | 
+  **body** | [**CreateDaemon**](CreateDaemon.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
 
 ### Return type
@@ -326,7 +326,7 @@ Create Database
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServerIdDatabasesBody**](ServerIdDatabasesBody.md)|  | 
+  **body** | [**CreateDatabase**](CreateDatabase.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
 
 ### Return type
@@ -353,7 +353,7 @@ Create Database User
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServerIdDatabaseusersBody**](ServerIdDatabaseusersBody.md)|  | 
+  **body** | [**CreateDatabaseUser**](CreateDatabaseUser.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
 
 ### Return type
@@ -407,7 +407,7 @@ Create Firewall Rule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServerIdFirewallrulesBody**](ServerIdFirewallrulesBody.md)|  | 
+  **body** | [**CreateFirewallRule**](CreateFirewallRule.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
 
 ### Return type
@@ -434,7 +434,7 @@ Create Job
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServerIdJobsBody**](ServerIdJobsBody.md)|  | 
+  **body** | [**CreateJob**](CreateJob.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
 
 ### Return type
@@ -461,7 +461,7 @@ Create Key
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServerIdKeysBody**](ServerIdKeysBody.md)|  | 
+  **body** | [**CreateKey**](CreateKey.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
 
 ### Return type
@@ -488,7 +488,7 @@ Create Monitor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServerIdMonitorsBody**](ServerIdMonitorsBody.md)|  | 
+  **body** | [**CreateMonitor**](CreateMonitor.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
 
 ### Return type
@@ -515,7 +515,7 @@ Create Recipe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**RecipesBody**](RecipesBody.md)|  | 
+  **body** | [**CreateRecipe**](CreateRecipe.md)|  | 
 
 ### Return type
 
@@ -541,7 +541,7 @@ Create Redirect Rule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdRedirectrulesBody**](SiteIdRedirectrulesBody.md)|  | 
+  **body** | [**CreateRedirectRule**](CreateRedirectRule.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -569,7 +569,7 @@ Create Security Rule
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdSecurityrulesBody**](SiteIdSecurityrulesBody.md)|  | 
+  **body** | [**CreateSecurityRule**](CreateSecurityRule.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -597,7 +597,7 @@ Create Server
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServersBody**](ServersBody.md)|  | 
+  **body** | [**CreateServer**](CreateServer.md)|  | 
 
 ### Return type
 
@@ -623,7 +623,7 @@ Create Site
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServerIdSitesBody**](ServerIdSitesBody.md)|  | 
+  **body** | [**CreateSite**](CreateSite.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
 
 ### Return type
@@ -650,7 +650,7 @@ Create Template
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**NginxTemplatesBody**](NginxTemplatesBody.md)|  | 
+  **body** | [**CreateTemplate**](CreateTemplate.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
 
 ### Return type
@@ -704,7 +704,7 @@ Create Worker
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdWorkersBody**](SiteIdWorkersBody.md)|  | 
+  **body** | [**CreateWorker**](CreateWorker.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -1382,7 +1382,7 @@ Execute Command
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdCommandsBody**](SiteIdCommandsBody.md)|  | 
+  **body** | [**ExecuteCommand**](ExecuteCommand.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -1921,7 +1921,7 @@ Get Recent Events
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServersEventsBody**](ServersEventsBody.md)|  | 
+  **body** | [**GetRecentEvents**](GetRecentEvents.md)|  | 
 
 ### Return type
 
@@ -2237,7 +2237,7 @@ Install Blackfire
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**BlackfireInstallBody**](BlackfireInstallBody.md)|  | 
+  **body** | [**InstallBlackfire**](InstallBlackfire.md)|  | 
   **id** | **int32**| The ID of the resource. | 
 
 ### Return type
@@ -2264,7 +2264,7 @@ Install Certificate
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**IdInstallBody**](IdInstallBody.md)|  | 
+  **body** | [**InstallCertificate**](InstallCertificate.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
   **id** | **int32**| The ID of the resource. | 
@@ -2293,7 +2293,7 @@ Install New Git Project
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdGitBody1**](SiteIdGitBody1.md)|  | 
+  **body** | [**InstallNewGitProject**](InstallNewGitProject.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -2347,7 +2347,7 @@ Install Papertrail
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**PapertrailInstallBody**](PapertrailInstallBody.md)|  | 
+  **body** | [**InstallPapertrail**](InstallPapertrail.md)|  | 
   **id** | **int32**| The ID of the resource. | 
 
 ### Return type
@@ -2374,7 +2374,7 @@ Install phpMyAdmin
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdPhpmyadminBody**](SiteIdPhpmyadminBody.md)|  | 
+  **body** | [**InstallPhpMyAdmin**](InstallPhpMyAdmin.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -2402,7 +2402,7 @@ Install WordPress
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdWordpressBody**](SiteIdWordpressBody.md)|  | 
+  **body** | [**InstallWordPress**](InstallWordPress.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -3054,7 +3054,7 @@ Reboot PHP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**PhpRebootBody**](PhpRebootBody.md)|  | 
+  **body** | [**RebootPhp**](RebootPhp.md)|  | 
   **id** | **int32**| The ID of the resource. | 
 
 ### Return type
@@ -3346,7 +3346,7 @@ Restore Backup
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**BackupsBackupIdBody**](BackupsBackupIdBody.md)|  | 
+  **body** | [**RestoreBackup**](RestoreBackup.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **backupConfigurationId** | **int32**| The ID of the backup configuration. | 
   **backupId** | **int32**| The ID of the backup. | 
@@ -3428,7 +3428,7 @@ Run Recipe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**RecipeIdRunBody**](RecipeIdRunBody.md)|  | 
+  **body** | [**RunRecipe**](RunRecipe.md)|  | 
   **recipeId** | **int32**| The ID of the recipe. | 
 
 ### Return type
@@ -3718,7 +3718,7 @@ Update Backup Configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**BackupconfigsBackupConfigurationIdBody**](BackupconfigsBackupConfigurationIdBody.md)|  | 
+  **body** | [**UpdateBackupConfiguration**](UpdateBackupConfiguration.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **backupConfigurationId** | **int32**| The ID of the backup configuration. | 
 
@@ -3746,7 +3746,7 @@ Update Database Password
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServerIdDatabasepasswordBody**](ServerIdDatabasepasswordBody.md)|  | 
+  **body** | [**UpdateDatabasePassword**](UpdateDatabasePassword.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
 
 ### Return type
@@ -3773,7 +3773,7 @@ Update Database User
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**DatabaseusersUserIdBody**](DatabaseusersUserIdBody.md)|  | 
+  **body** | [**UpdateDatabaseUser**](UpdateDatabaseUser.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **userId** | **int32**| The ID of the user. | 
 
@@ -3801,7 +3801,7 @@ Update Deployment Script
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**DeploymentScriptBody**](DeploymentScriptBody.md)|  | 
+  **body** | [**UpdateDeploymentScript**](UpdateDeploymentScript.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -3829,7 +3829,7 @@ Update .env File
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdEnvBody**](SiteIdEnvBody.md)|  | 
+  **body** | [**UpdateEnvFile**](UpdateEnvFile.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -3857,7 +3857,7 @@ Update Load Balancing
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdBalancingBody**](SiteIdBalancingBody.md)|  | 
+  **body** | [**UpdateLoadBalancing**](UpdateLoadBalancing.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -3885,7 +3885,7 @@ Update Nginx Configuration
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdNginxBody**](SiteIdNginxBody.md)|  | 
+  **body** | [**UpdateNginxConfiguration**](UpdateNginxConfiguration.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -3940,7 +3940,7 @@ Update Recipe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**RecipesRecipeIdBody**](RecipesRecipeIdBody.md)|  | 
+  **body** | [**UpdateRecipe**](UpdateRecipe.md)|  | 
   **recipeId** | **int32**| The ID of the recipe. | 
 
 ### Return type
@@ -3967,7 +3967,7 @@ Update Repository
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SiteIdGitBody**](SiteIdGitBody.md)|  | 
+  **body** | [**UpdateRepository**](UpdateRepository.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
@@ -3995,7 +3995,7 @@ Update Server
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**ServersIdBody**](ServersIdBody.md)|  | 
+  **body** | [**UpdateServer**](UpdateServer.md)|  | 
   **id** | **int32**| The ID of the resource. | 
 
 ### Return type
@@ -4022,7 +4022,7 @@ Update Site
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **body** | [**SitesSiteIdBody**](SitesSiteIdBody.md)|  | 
+  **body** | [**UpdateSite**](UpdateSite.md)|  | 
   **serverId** | **int32**| The ID of the server. | 
   **siteId** | **int32**| The ID of the site. | 
 
